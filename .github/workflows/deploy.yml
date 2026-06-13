@@ -41,5 +41,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: frontend/dist/
-          server-dir: public_html/
+          server-dir: ./
           dangerous-disable-tls: true
