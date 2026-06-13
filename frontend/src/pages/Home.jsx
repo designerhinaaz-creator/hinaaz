@@ -2,19 +2,19 @@ import React from 'react';
 import heroImage from '../assets/hero-image.png';
 import img1 from '../assets/1.png';
 import img2 from '../assets/13.png';
-import img3 from '../assets/10.png';
-import img4 from '../assets/image-4.webp';
-import img5 from '../assets/image-5.webp';
-import img6 from '../assets/image-6.webp';
-import img7 from '../assets/image-7.webp';
-import img8 from '../assets/image-8.webp';
-import img9 from '../assets/image-9.webp';
+import img3 from '../assets/12.png';
+import img4 from '../assets/4.png';
+import img5 from '../assets/5.png';
+import img6 from '../assets/6.png';
+import img7 from '../assets/7.png';
+import img8 from '../assets/8.png';
+import img9 from '../assets/20.png';
 
 /* ─── Data (same structure as Shrusara) ─── */
 const SERVICES = [
   { title: 'Bridal Collection', desc: 'Custom necklines, perfect fitting & elegant finishing designed to complement your wedding saree.', img: img1, to: '/bridal' },
   { title: 'Designer Collection', desc: 'Premium handcrafted embroidery with rich detailing, creating a luxurious 3D finish for your bridal blouse.', img: img2, to: '/bridal' },
-  { title: 'Lehenga & Gowns', desc: 'Elegant bridal lehengas and gowns designed with perfect structure, graceful flow and premium finishing.', img: img3, to: '/bridal' },
+  { title: 'Saree Collection', desc: 'Exquisite sarees with premium draping styles, rich fabrics and elegant finishes crafted for every special occasion.', img: img3, to: '/bridal' },
 ];
 
 const WHY_CHOOSE = [
@@ -34,12 +34,12 @@ const ABOUT_CARDS = [
 ];
 
 const REVIEWS = [
-  { name: 'Priya Sharma', date: '2 weeks ago', text: 'Absolutely stunning work! My bridal blouse was exactly what I dreamed of. The maggam work detail was breathtaking and the fit was perfect. Highly recommend!' },
-  { name: 'Divya Reddy', date: '1 month ago', text: 'I got my lehenga stitched here for my sister\'s wedding and I was blown away. The team is incredibly talented and the attention to detail is unmatched.' },
-  { name: 'Ananya Krishnamurthy', date: '3 weeks ago', text: 'From the first consultation to the final fitting, the experience was seamless. My designer outfit drew so many compliments. Will definitely return!' },
+  { name: 'Sravani Reddy', date: '2 weeks ago', text: 'Hinaaz is absolutely wonderful! They created the most perfect bridal blouse with exquisite maggam work. The fitting was spot on right from the first try. I highly recommend them!' },
+  { name: 'Pavithra Lakshmi', date: '1 month ago', text: 'We ordered a designer lehenga for my sister\'s wedding. The stitching quality, embroidery, and design were superb. Everyone who visits Hinaaz Boutique will definitely be completely satisfied!' },
+  { name: 'Keerthi Rao', date: '3 weeks ago', text: 'From consultation to final fitting, everything was handled very professionally. My saree blouse was designed exactly as I had dreamed. I will definitely come back for my next occasion!' },
 ];
 
-const PHONE = '9741827558';
+const PHONE = '08977640073';
 const WA_TEXT = encodeURIComponent("Hi, I'm interested in customized bridal outfits. I would like to consult with Chief Designer Hinaaz.");
 const WA_URL = `https://wa.me/${PHONE}?text=${WA_TEXT}`;
 const TEL_URL = `tel:${PHONE}`;
@@ -56,7 +56,7 @@ function ServiceCard({ service }) {
         <h3 className="sf-service-title">{service.title}</h3>
         <p className="sf-service-desc">{service.desc}</p>
         <div className="sf-service-actions">
-          <span className="sf-btn-outline" style={{ width: '100%', textAlign: 'center' }}>View Designs</span>
+          <span className="sf-btn-outline" style={{ width: '100%', textAlign: 'center' }}>Shop Collection</span>
         </div>
       </div>
     </a>
@@ -328,7 +328,7 @@ export default function Home() {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: center;
+          object-position: top center;
           transition: transform 0.5s;
           display: block;
         }
@@ -461,6 +461,7 @@ export default function Home() {
         }
         .sf-gallery-item img {
           width: 100%; height: 100%; object-fit: cover;
+          object-position: top center;
           transition: transform 0.5s;
           display: block;
         }
@@ -686,7 +687,7 @@ export default function Home() {
       </section>
 
       {/* ══ SERVICES ══ */}
-      <div className="sf-shell">
+      <div className="sf-shell" style={{ paddingBottom: '24px' }}>
         <div className="sf-services-headline">
           <p className="sf-eyebrow">Services</p>
           <h2 className="sf-heading">Customized Bridal &amp; Designer Boutique in Hyderabad</h2>
@@ -698,15 +699,15 @@ export default function Home() {
       </div>
 
       {/* ══ CTA BANNER 1 ══ */}
-      <div className="sf-shell">
+      <div className="sf-shell" style={{ paddingTop: '0px' }}>
         <div className="sf-consult-banner">
           <div>
-            <h2 className="sf-consult-title">Join our happy clients — book your consultation today</h2>
+            <h2 className="sf-consult-title">Join our happy clients — Explore and shop our premium collection</h2>
             <p className="sf-consult-sub">Start your bridal consultation</p>
           </div>
           <div className="sf-consult-btns">
             <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="sf-btn-primary-light" id="cta-wa-btn-1">WhatsApp Enquiry</a>
-            <a href={TEL_URL} className="sf-btn-secondary-light" id="cta-call-btn-1">Call Now</a>
+            <a href={TEL_URL} className="sf-btn-secondary-light" id="cta-call-btn-1">Shop Now</a>
           </div>
         </div>
       </div>
@@ -741,29 +742,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ══ CATEGORIES ══ */}
-      <div className="sf-shell-alt">
-        <div className="sf-shell-alt-inner">
-          <p className="sf-eyebrow">Explore Categories</p>
-          <h2 className="sf-heading">Find Your Perfect Bridal or Designer Outfit</h2>
-          <div className="sf-cat-grid">
-            <a href="/bridal" className="sf-cat-card" id="cat-bridal">
-              <img src={img6} alt="Bridal Collection" className="sf-cat-img" loading="lazy" />
-              <div className="sf-cat-header">
-                <h3 className="sf-cat-title">Bridal Collection</h3>
-              </div>
-              <div className="sf-cat-footer">Bridal designs starting at ₹6000</div>
-            </a>
-            <a href="/designer" className="sf-cat-card" id="cat-designer">
-              <img src={img7} alt="Designer Collection" className="sf-cat-img" loading="lazy" />
-              <div className="sf-cat-header">
-                <h3 className="sf-cat-title">Designer Collection</h3>
-              </div>
-              <div className="sf-cat-footer">Designer outfit starting at ₹5000</div>
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* ══ ABOUT ══ */}
       <div className="sf-shell">
@@ -851,19 +829,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ══ CTA BANNER 2 ══ */}
-      <div className="sf-shell">
-        <div className="sf-consult-banner">
-          <div>
-            <h2 className="sf-consult-title">Join our happy clients — book your consultation today</h2>
-            <p className="sf-consult-sub">Book Your Bridal Consultation Today</p>
-          </div>
-          <div className="sf-consult-btns">
-            <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="sf-btn-primary-light" id="cta-wa-btn-2">WhatsApp Enquiry</a>
-            <a href={TEL_URL} className="sf-btn-secondary-light" id="cta-call-btn-2">Call Now</a>
-          </div>
-        </div>
-      </div>
+
     </>
   );
 }

@@ -3,12 +3,14 @@ import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import FloatingActions from './FloatingActions';
+import ScrollToTop from './ScrollToTop';
 
 const Layout = () => {
   return (
-    <div className="app">
+    <div className="app" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <ScrollToTop />
       <Header />
-      <main>
+      <main style={{ paddingTop: '100px', flex: 1 }}>
         <Outlet />
       </main>
       <FloatingActions />

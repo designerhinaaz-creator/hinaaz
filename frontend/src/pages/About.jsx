@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
-import img1 from '../assets/image-1.webp';
-import img8 from '../assets/image-8.webp';
+import img1 from '../assets/1.png';
+import img8 from '../assets/21.png';
 
 const About = () => {
   return (
@@ -21,7 +21,7 @@ const About = () => {
           </div>
         </div>
         <div style={{ flex: '1 1 300px' }}>
-          <img src={img1} alt="Bridal Design" style={{ width: '100%', borderRadius: '16px', objectFit: 'cover', height: 'clamp(300px, 50vw, 600px)', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+          <img src={img1} alt="Bridal Design" style={{ width: '100%', borderRadius: '16px', objectFit: 'cover', objectPosition: 'top center', height: 'clamp(300px, 50vw, 600px)', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
         </div>
       </section>
 
@@ -29,7 +29,7 @@ const About = () => {
       <section style={{ padding: 'clamp(40px, 5vw, 60px) 5vw', backgroundColor: '#fcfbf8' }}>
         <div style={{ backgroundColor: '#3c2d24', borderRadius: '24px', padding: 'clamp(30px, 5vw, 50px)', display: 'flex', flexWrap: 'wrap', color: 'white', gap: '50px', position: 'relative', zIndex: 2 }}>
           <div style={{ flex: '1 1 300px', position: 'relative' }}>
-             <img src={img8} alt="Shruthi Ajith" style={{ width: '100%', borderRadius: '16px', objectFit: 'cover', height: '100%', minHeight: '300px' }} />
+             <img src={img8} alt="Shravya Choudary" style={{ width: '100%', borderRadius: '16px', objectFit: 'cover', objectPosition: 'center top', height: '100%', minHeight: '300px' }} />
              <div style={{ position: 'absolute', bottom: '20px', left: '20px', backgroundColor: 'rgba(0,0,0,0.6)', padding: '10px 20px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '10px', backdropFilter: 'blur(5px)' }}>
                 <span style={{ color: '#cba153', fontSize: '1.5rem' }}>✨</span>
                  <div>
@@ -40,7 +40,7 @@ const About = () => {
           </div>
           <div style={{ flex: '1.5 1 300px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
              <p style={{ color: '#cba153', fontSize: '0.8rem', letterSpacing: '2px', marginBottom: '10px' }}>THE CHIEF DESIGNER AND FOUNDER</p>
-             <h2 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', fontFamily: 'var(--font-heading)', marginBottom: '5px' }}>Shruthi Ajith</h2>
+             <h2 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', fontFamily: 'var(--font-heading)', marginBottom: '5px', color: '#ffffff' }}>Shravya Choudary</h2>
              <p style={{ color: '#cba153', marginBottom: '30px', fontSize: '1.1rem' }}>Founder & Chief Designer</p>
              
              <p style={{ color: '#e5e0d8', lineHeight: '1.6', marginBottom: '20px', fontSize: '1.05rem' }}>
@@ -48,12 +48,12 @@ const About = () => {
              </p>
              
              <div style={{ backgroundColor: 'rgba(255,255,255,0.05)', padding: '25px', borderRadius: '12px', borderLeft: '4px solid #cba153', marginBottom: '30px' }}>
-                <p style={{ fontStyle: 'italic', color: '#e5e0d8', margin: 0, fontSize: '1.1rem' }}>"I have always believed that every piece of clothing should be a masterpiece that enhances the wearer's beauty and confidence. - Shruthi Ajith"</p>
+                <p style={{ fontStyle: 'italic', color: '#ffffff', margin: 0, fontSize: '1.1rem' }}>"I have always believed that every piece of clothing should be a masterpiece that enhances the wearer's beauty and confidence. - Shravya Choudary"</p>
              </div>
              
              <div style={{ display: 'flex', gap: '15px', marginTop: 'auto', flexWrap: 'wrap' }}>
                 <button className="btn-gold" style={{ padding: '12px 25px', borderRadius: '30px', backgroundColor: '#cba153', color: '#3c2d24', border: 'none', fontWeight: 'bold', cursor: 'pointer' }}>Connect on WhatsApp</button>
-                <button className="btn-outline" style={{ color: 'white', borderColor: 'white', padding: '12px 25px', borderRadius: '30px', border: '1px solid white', backgroundColor: 'transparent', fontWeight: 'bold', cursor: 'pointer' }}>📞 9741827558</button>
+                <button className="btn-outline" style={{ color: 'white', borderColor: 'white', padding: '12px 25px', borderRadius: '30px', border: '1px solid white', backgroundColor: 'transparent', fontWeight: 'bold', cursor: 'pointer' }}>📞 089776 40073</button>
              </div>
           </div>
         </div>
@@ -128,22 +128,26 @@ const About = () => {
               <button style={{ padding: '12px 25px', borderRadius: '30px', border: '1px solid #e5e0d8', backgroundColor: 'transparent', color: '#3c2d24', fontWeight: 'bold', cursor: 'pointer' }}>Write a Review</button>
            </div>
            
-           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
-              {[1, 2, 3].map((r) => (
-                 <div key={r} style={{ padding: '30px', border: '1px solid #f4efea', borderRadius: '16px', backgroundColor: '#fcfbf8' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px' }}>
-                       <div>
-                          <p style={{ fontWeight: 'bold', fontSize: '1rem', color: '#3c2d24', margin: '0 0 5px 0' }}>Customer Name {r}</p>
-                          <p style={{ fontSize: '0.8rem', color: '#8c7e73', margin: 0 }}>1 month ago</p>
-                       </div>
-                       <div style={{ color: '#FFD700', fontSize: '0.9rem' }}>★★★★★</div>
-                    </div>
-                    <p style={{ fontSize: '0.95rem', color: '#6a5a52', lineHeight: '1.6', margin: 0 }}>
-                       "Absolutely amazing experience! The team understood exactly what I wanted and delivered a masterpiece. Highly recommended!"
-                    </p>
-                 </div>
-              ))}
-           </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
+               {[
+                 { name: 'Anjali Sharma', date: '2 weeks ago', text: 'I had my bridal lehenga customized here, and it turned out absolutely gorgeous! The fitting was flawless, and the intricate embroidery exceeded all my expectations. Highly recommend for any bride-to-be!' },
+                 { name: 'Priyanka Sen', date: '1 month ago', text: 'The team is incredibly talented and professional. They understood my vision perfectly and delivered a stunning, customized bridal gown right on time. Thank you for making my special day so perfect!' },
+                 { name: 'Divya Reddy', date: '3 weeks ago', text: 'Extremely happy with my wedding outfits. The attention to detail, fabric quality, and personalized design consultations were top-notch. Truly a premium experience in Hyderabad!' }
+               ].map((r, index) => (
+                  <div key={index} style={{ padding: '30px', border: '1px solid #f4efea', borderRadius: '16px', backgroundColor: '#fcfbf8' }}>
+                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px' }}>
+                        <div>
+                           <p style={{ fontWeight: 'bold', fontSize: '1rem', color: '#3c2d24', margin: '0 0 5px 0' }}>{r.name}</p>
+                           <p style={{ fontSize: '0.8rem', color: '#8c7e73', margin: 0 }}>{r.date}</p>
+                        </div>
+                        <div style={{ color: '#FFD700', fontSize: '0.9rem' }}>★★★★★</div>
+                     </div>
+                     <p style={{ fontSize: '0.95rem', color: '#6a5a52', lineHeight: '1.6', margin: 0 }}>
+                        "{r.text}"
+                     </p>
+                  </div>
+               ))}
+            </div>
         </div>
       </section>
 

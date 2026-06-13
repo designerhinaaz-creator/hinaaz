@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import '../App.css';
 
@@ -10,15 +10,13 @@ const Header = () => {
 
   return (
     <nav className="navbar">
-      <div className="nav-logo">
+      <Link to="/" className="nav-logo">
         <img src={logo} alt="Hinaaz Logo" className="logo-img" />
-      </div>
+      </Link>
       
       <div className={`nav-links ${isMenuOpen ? 'mobile-open' : ''}`}>
         <NavLink to="/" onClick={toggleMenu} className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
-        <NavLink to="/bridal" onClick={toggleMenu} className={({ isActive }) => (isActive ? 'active' : '')}>Bridal</NavLink>
-        <NavLink to="/designer" onClick={toggleMenu} className={({ isActive }) => (isActive ? 'active' : '')}>Designer</NavLink>
-        <NavLink to="/kids" onClick={toggleMenu} className={({ isActive }) => (isActive ? 'active' : '')}>Kids</NavLink>
+        <a href="https://shop.hinaazdesigner.com" target="_blank" rel="noopener noreferrer" className="btn-shop-collection" onClick={toggleMenu} style={{ textDecoration: 'none' }}>Shop Collection</a>
         <NavLink to="/about" onClick={toggleMenu} className={({ isActive }) => (isActive ? 'active' : '')}>About</NavLink>
         <NavLink to="/contact" onClick={toggleMenu} className={({ isActive }) => (isActive ? 'active' : '')}>Contact</NavLink>
       </div>

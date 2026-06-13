@@ -2,12 +2,12 @@ import React from 'react';
 import './Kids.css';
 
 // Using provided local assets to simulate the kids gallery
-import img1 from '../assets/image-1.webp';
-import img2 from '../assets/image-2.webp';
-import img3 from '../assets/image-3.webp';
-import img4 from '../assets/image-4.webp';
-import img5 from '../assets/image-5.webp';
-import img6 from '../assets/image-6.webp';
+import img1 from '../assets/15.png';
+import img2 from '../assets/16.png';
+import img3 from '../assets/17.png';
+import img4 from '../assets/18.png';
+import img5 from '../assets/19.png';
+import img6 from '../assets/20.png';
 
 const Kids = () => {
   

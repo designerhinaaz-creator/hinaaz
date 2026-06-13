@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import '../App.css';
-import img1 from '../assets/image-1.webp';
-import img2 from '../assets/image-2.webp';
-import img3 from '../assets/image-3.webp';
-import img4 from '../assets/image-4.webp';
-import img5 from '../assets/image-5.webp';
-import img6 from '../assets/image-6.webp';
+import img1 from '../assets/10.png';
+import img2 from '../assets/11.png';
+import img3 from '../assets/12.png';
+import img4 from '../assets/13.png';
+import img5 from '../assets/14.png';
+import img6 from '../assets/15.png';
 
 const galleryImages = [img1, img2, img3, img4, img5, img6, img1, img2, img3, img4, img5, img6];
 const galleryImages2 = [img1, img2, img3, img4, img5, img6, img1, img2, img3, img4, img5, img6, img1, img2, img5];

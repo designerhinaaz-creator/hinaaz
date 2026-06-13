@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import './Bridal.css';
 
 // Using provided local assets
-import img1 from '../assets/image-1.webp';
-import img2 from '../assets/image-2.webp';
-import img3 from '../assets/image-3.webp';
-import img4 from '../assets/image-4.webp';
-import img5 from '../assets/image-5.webp';
-import img6 from '../assets/image-6.webp';
-import img7 from '../assets/image-7.webp';
-import img8 from '../assets/image-8.webp';
-import img9 from '../assets/image-9.webp';
+import img1 from '../assets/1.png';
+import img2 from '../assets/2.png';
+import img3 from '../assets/3.png';
+import img4 from '../assets/4.png';
+import img5 from '../assets/5.png';
+import img6 from '../assets/6.png';
+import img7 from '../assets/7.png';
+import img8 from '../assets/8.png';
+import img9 from '../assets/20.png';
 
 const Bridal = () => {
   const [activeFilter, setActiveFilter] = useState('All');

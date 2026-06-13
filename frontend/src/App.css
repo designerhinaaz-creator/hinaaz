@@ -10,13 +10,15 @@
   align-items: center;
   padding: 0 32px;
   height: 100px;
-  background-color: rgba(247, 242, 235, 0.92);
+  background-color: rgba(247, 242, 235, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(110, 88, 69, 0.1);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .nav-logo {
@@ -27,7 +29,7 @@
 }
 
 .logo-img {
-  height: 80px;
+  height: 85px;
   object-fit: contain;
 }
 
@@ -51,8 +53,9 @@
 
 .nav-links {
   display: flex;
-  gap: 4px;
+  gap: 6px;
   align-items: center;
+  padding: 0 8px;
 }
 
 .nav-links a {
@@ -77,7 +80,7 @@
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .btn-call-now {
@@ -95,6 +98,27 @@
 .btn-call-now:hover {
   background-color: rgba(62, 44, 35, 0.06);
   border-color: #3E2C23;
+}
+
+.btn-shop-collection {
+  font-family: 'Poppins', sans-serif !important;
+  background: linear-gradient(135deg, #C8A96A, #a07840);
+  color: #fff;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 12px rgba(200, 169, 106, 0.35);
+  letter-spacing: 0.02em;
+  margin: 0 4px 0 16px;
+}
+.btn-shop-collection:hover {
+  background: linear-gradient(135deg, #d4b87a, #b08a50);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(200, 169, 106, 0.5);
 }
 
 .btn-whatsapp {
@@ -198,13 +222,15 @@
 @media (max-width: 768px) {
   .navbar { 
     padding: 0 16px; 
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
   }
   
   .nav-links { 
     display: none; 
-    position: absolute;
-    top: 72px;
+    position: fixed;
+    top: 100px;
     left: 0;
     right: 0;
     background-color: rgba(247, 242, 235, 0.98);
@@ -264,7 +290,20 @@
     }
   }
 
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer {
+    padding: 40px 0 20px !important;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 30px !important;
+    margin-bottom: 24px !important;
+  }
+  .footer-col-about {
+    display: none !important;
+  }
+  .footer-col-contact {
+    grid-column: span 2 !important;
+  }
 }
 
 /* ── Consultation form inputs ── */

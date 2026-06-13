@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PHONE   = '9741827558';
+const PHONE   = '08977640073';
 const WA_TEXT = encodeURIComponent("Hi, I'm interested in customized bridal outfits at Hinaaz Fashion Boutique.");
 const WA_URL  = `https://wa.me/${PHONE}?text=${WA_TEXT}`;
 const TEL_URL = `tel:${PHONE}`;
