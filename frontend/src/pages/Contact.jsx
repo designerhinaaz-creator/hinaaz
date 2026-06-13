@@ -14,7 +14,7 @@ const Contact = () => {
             <p style={{ color: '#6a5a52', marginBottom: '30px', fontSize: '1.1rem' }}>
               Share your occasion, outfit ideas, and design preferences to begin your custom boutique collection.
             </p>
-            <p style={{ fontWeight: '600', color: '#3c2d24', marginBottom: '40px' }}>Personal collection by our Chief Designer Shravya Choudary</p>
+            <p style={{ fontWeight: '600', color: '#3c2d24', marginBottom: '40px' }}>Personal collection by our Chief Designer Hinaaz</p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ border: '1px solid #e5e0d8', padding: '20px', borderRadius: '12px' }}>
