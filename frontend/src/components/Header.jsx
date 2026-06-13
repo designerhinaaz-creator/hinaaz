@@ -16,7 +16,7 @@ const Header = () => {
       
       <div className={`nav-links ${isMenuOpen ? 'mobile-open' : ''}`}>
         <NavLink to="/" onClick={toggleMenu} className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
-        <a href="https://shop.hinaazdesigner.com" target="_blank" rel="noopener noreferrer" className="btn-shop-collection" onClick={toggleMenu} style={{ textDecoration: 'none' }}>Shop Collection</a>
+        <a href="https://shop.hinaazdesigner.com/" target="_blank" rel="noopener noreferrer" className="btn-shop-collection" onClick={toggleMenu} style={{ textDecoration: 'none' }}>Shop Collection</a>
         <NavLink to="/about" onClick={toggleMenu} className={({ isActive }) => (isActive ? 'active' : '')}>About</NavLink>
         <NavLink to="/contact" onClick={toggleMenu} className={({ isActive }) => (isActive ? 'active' : '')}>Contact</NavLink>
       </div>
