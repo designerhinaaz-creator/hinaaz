@@ -1,0 +1,82 @@
+/* ── Exact Shrusara font + color reset ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --sf-primary:   #3E2C23;
+  --sf-secondary: #EAE3DC;
+  --sf-bg:        #F8F6F3;
+  --sf-accent:    #C8A96A;
+  --sf-text:      #2A1E17;
+  --sf-muted:     #7A6A60;
+  --sf-white:     #FFFFFF;
+  --sf-radius:    24px;
+  --sf-radius-sm: 14px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--sf-bg) !important;
+  font-family: 'Poppins', sans-serif !important;
+  color: var(--sf-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+/* Force Poppins on all body text */
+p, span, a, li, label, input, textarea, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Force Playfair Display on all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700;
+  color: var(--sf-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul { list-style: none; }
+
+button {
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  outline: none;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+::selection      { background: rgba(200, 169, 106, 0.3); }
+::-moz-selection { background: rgba(200, 169, 106, 0.3); }
+
+input::placeholder, textarea::placeholder {
+  color: rgba(122, 106, 96, 0.5);
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}

@@ -1,0 +1,274 @@
+/* ═══════════════════════════════════════════
+   Hinaaz — Navbar & shared component styles
+   Fonts: Playfair Display (headings) + Poppins (body)
+   ═══════════════════════════════════════════ */
+
+/* ── NAVBAR ── */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  height: 100px;
+  background-color: rgba(247, 242, 235, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(110, 88, 69, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 24px;
+}
+
+.logo-img {
+  height: 80px;
+  object-fit: contain;
+}
+
+.logo-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3E2C23 !important;
+  line-height: 1.1;
+}
+
+.logo-subtitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  color: #7A6A60;
+  margin-top: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #3E2C23;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+}
+
+.nav-links a.active {
+  background-color: #3E2C23;
+  color: #fff;
+}
+
+.nav-links a:hover:not(.active) {
+  background-color: rgba(62, 44, 35, 0.07);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-call-now {
+  font-family: 'Poppins', sans-serif !important;
+  background-color: transparent;
+  color: #3E2C23;
+  border: 1.5px solid rgba(62, 44, 35, 0.35);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.btn-call-now:hover {
+  background-color: rgba(62, 44, 35, 0.06);
+  border-color: #3E2C23;
+}
+
+.btn-whatsapp {
+  font-family: 'Poppins', sans-serif !important;
+  background-color: #3E2C23;
+  color: #fff;
+  padding: 9px 18px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.btn-whatsapp:hover {
+  background-color: #C8A96A;
+  transform: translateY(-1px);
+}
+
+/* ── FOOTER ── */
+.footer {
+  background-color: #F8F6F3;
+  padding: 72px 0 32px;
+  border-top: 1px solid rgba(110, 88, 69, 0.12);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3E2C23 !important;
+  margin-bottom: 16px;
+}
+
+.footer-desc {
+  font-family: 'Poppins', sans-serif !important;
+  color: #7A6A60;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+.footer-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #3E2C23 !important;
+}
+
+.footer-links li { margin-bottom: 12px; }
+
+.footer-links a {
+  font-family: 'Poppins', sans-serif !important;
+  color: #7A6A60;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+  font-weight: 400;
+}
+.footer-links a:hover { color: #C8A96A; }
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 28px;
+  border-top: 1px solid rgba(110, 88, 69, 0.1);
+  font-family: 'Poppins', sans-serif !important;
+  color: #7A6A60;
+  font-size: 0.82rem;
+  font-weight: 400;
+}
+
+/* ── FLOATING ACTIONS ── */
+.floating-actions {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 60;
+}
+
+/* ── RESPONSIVE ── */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #3E2C23;
+  cursor: pointer;
+  padding: 4px;
+}
+
+@media (max-width: 768px) {
+  .navbar { 
+    padding: 0 16px; 
+    position: relative;
+  }
+  
+  .nav-links { 
+    display: none; 
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: rgba(247, 242, 235, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(110, 88, 69, 0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+  }
+  
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+    border-radius: 0;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-call-now { display: none; }
+  
+  /* Make the WhatsApp button smaller on very small screens */
+  .btn-whatsapp {
+    padding: 8px 14px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .wa-text {
+    display: none;
+  }
+  
+  .btn-whatsapp svg {
+    margin-right: 0 !important;
+  }
+  
+  @media (min-width: 380px) {
+    .wa-text {
+      display: inline;
+    }
+    .btn-whatsapp svg {
+      margin-right: 6px !important;
+    }
+  }
+
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Consultation form inputs ── */
+.consultation-form-section input {
+  font-family: 'Poppins', sans-serif !important;
+  color: white !important;
+}

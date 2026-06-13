@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  --bg-linen: #f4efea;
+  --bg-white: #ffffff;
+  --color-dark-brown: #3f2e24;
+  --color-gold: #c8a361;
+  --text-primary: #1c1c1c;
+  --text-secondary: #5c5c5c;
+  --border-light: rgba(0,0,0,0.06);
+}
+
+.bridal-clone-page {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-linen);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.br-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.br-font-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+/* --------------------------------------
+   Hero Section
+--------------------------------------- */
+.br-hero {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5%;
+}
+
+@media (min-width: 1024px) {
+  .br-hero {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem 0 2rem 5%;
+  }
+}
+
+.br-hero-text {
+  flex: 1.1;
+  max-width: 650px;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .br-hero-text {
+    padding-bottom: 0;
+  }
+}
+
+.br-eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.br-hero-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--color-dark-brown);
+}
+
+@media (min-width: 768px) {
+  .br-hero-h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.br-hero-h1 span {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-gold);
+}
+
+.br-sub-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.br-hero-btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.br-btn-pri {
+  background-color: var(--color-dark-brown);
+  color: var(--bg-white);
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-dark-brown);
+}
+
+.br-btn-pri:hover {
+  background-color: #2a1e17;
+}
+
+.br-btn-sec {
+  background-color: transparent;
+  color: var(--color-dark-brown);
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--color-dark-brown);
+  transition: all 0.3s ease;
+}
+
+.br-btn-sec:hover {
+  background-color: rgba(63, 46, 36, 0.05);
+}
+
+.br-hero-img-wrap {
+  flex: 0.9;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+}
+
+.br-hero-img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* --------------------------------------
+   Trust Grid Section
+--------------------------------------- */
+.br-trust-section {
+  padding: 3rem 5%;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.br-trust-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .br-trust-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.br-trust-card {
+  background: var(--bg-white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.br-trust-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.br-trust-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-dark-brown);
+}
+
+.br-trust-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* --------------------------------------
+   Common Section Headers
+--------------------------------------- */
+.br-section-padding {
+  padding: 5rem 5%;
+}
+
+.br-sec-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.br-sec-eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.br-sec-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--color-dark-brown);
+  margin-bottom: 1rem;
+}
+
+.br-sec-sub {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --------------------------------------
+   Gallery & Filters
+--------------------------------------- */
+.br-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.br-filter-pill {
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-white);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.br-filter-pill:hover, .br-filter-pill.active {
+  background: var(--color-dark-brown);
+  color: var(--bg-white);
+  border-color: var(--color-dark-brown);
+}
+
+.br-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .br-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.br-gallery-card {
+  background: var(--bg-white);
+  padding: 0.75rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+}
+
+.br-gallery-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.br-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.br-gallery-card:hover .br-gallery-img {
+  transform: scale(1.05);
+}
+
+/* --------------------------------------
+   Banner CTA
+--------------------------------------- */
+.br-banner-cta {
+  background: var(--color-dark-brown);
+  border-radius: 2rem;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .br-banner-cta {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.br-banner-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--bg-white);
+  margin-bottom: 0.5rem;
+}
+
+.br-banner-sub {
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+}
+
+.br-btn-gold {
+  background-color: var(--color-gold);
+  color: var(--bg-white);
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.br-btn-gold:hover {
+  background-color: #b38f4d;
+}
+
+/* --------------------------------------
+   Services Split Section
+--------------------------------------- */
+.br-services-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .br-services-wrap {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+.br-services-left {
+  text-align: left;
+}
+
+.br-services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.br-service-pill {
+  background: var(--bg-white);
+  padding: 1.25rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.br-service-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-gold);
+  border-radius: 50%;
+}
+
+/* --------------------------------------
+   Why Shrusara Grid
+--------------------------------------- */
+.br-why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+
+.br-why-card {
+  background: var(--bg-white);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.br-why-icon {
+  color: var(--color-gold);
+}
+
+/* --------------------------------------
+   Process Flow
+--------------------------------------- */
+.br-process-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .br-process-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.br-process-card {
+  background: var(--bg-white);
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  border: 1px solid var(--border-light);
+}
+
+.br-process-num {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  line-height: 1;
+  color: rgba(200, 163, 97, 0.1); /* light gold watermark */
+  font-weight: 700;
+}
+
+.br-process-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark-brown);
+  position: relative;
+  z-index: 2;
+}
+
+.br-process-desc {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------
+   Reviews Section
+--------------------------------------- */
+.br-reviews-wrap {
+  background: var(--bg-white);
+  border-radius: 2rem;
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+}
+
+.br-reviews-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .br-reviews-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.br-reviews-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--color-dark-brown);
+}
+
+.br-reviews-rating {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.br-rating-score {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--color-dark-brown);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.br-stars {
+  color: #fbbc04;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.br-reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .br-reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.br-review-item {
+  border: 1px solid var(--border-light);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.br-review-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.br-review-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.br-review-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------
+   Bottom CTA Section
+--------------------------------------- */
+.br-final-cta {
+  background: var(--color-dark-brown);
+  border-radius: 2rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.br-final-cta .br-sec-eyebrow {
+  color: var(--color-gold);
+}
+
+.br-final-cta .br-sec-h2 {
+  color: var(--bg-white);
+}
+
+.br-final-cta .br-sec-sub {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 2.5rem;
+}

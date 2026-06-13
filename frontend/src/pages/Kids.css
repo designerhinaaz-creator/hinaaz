@@ -1,0 +1,443 @@
+/* Reusing some roots from Bridal.css if loaded, but defining here for safety if visited directly */
+:root {
+  --bg-linen: #f4efea;
+  --bg-white: #ffffff;
+  --color-dark-brown: #3f2e24;
+  --color-gold: #c8a361;
+  --text-primary: #1c1c1c;
+  --text-secondary: #5c5c5c;
+  --border-light: rgba(0,0,0,0.06);
+}
+
+.kids-clone-page {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-linen);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.kd-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* --------------------------------------
+   Hero Section (Full Bleed Right)
+--------------------------------------- */
+.kd-hero-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+}
+
+@media (min-width: 1024px) {
+  .kd-hero-wrapper {
+    flex-direction: row;
+    min-height: 650px;
+    align-items: center;
+  }
+}
+
+.kd-hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 5% 1rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .kd-hero-content {
+    padding: 3rem 5%;
+  }
+}
+
+.kd-hero-text {
+  max-width: 650px;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+@media (min-width: 1024px) {
+  .kd-hero-text {
+    padding: 4rem 0;
+  }
+}
+
+.kd-hero-image-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .kd-hero-image-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 55%;
+    height: 100%;
+  }
+}
+
+.kd-hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.kd-hero-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--bg-linen) 0%, transparent 100%);
+}
+
+@media (min-width: 1024px) {
+  .kd-hero-fade {
+    width: 250px;
+    background: linear-gradient(to right, var(--bg-linen) 0%, transparent 100%);
+  }
+}
+
+.kd-eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.kd-hero-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--color-dark-brown);
+}
+
+@media (min-width: 768px) {
+  .kd-hero-h1 {
+    font-size: 3.8rem;
+    max-width: 700px;
+  }
+}
+
+.kd-hero-h1 span {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  color: var(--color-gold);
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .kd-hero-h1 span {
+    font-size: 3.2rem;
+  }
+}
+
+.kd-sub-flex {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.kd-hero-btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.kd-btn-pri {
+  background-color: var(--color-dark-brown);
+  color: var(--bg-white);
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-dark-brown);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kd-btn-pri:hover {
+  background-color: #2a1e17;
+}
+
+.kd-btn-sec {
+  background-color: transparent;
+  color: var(--color-dark-brown);
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--color-dark-brown);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kd-btn-sec:hover {
+  background-color: rgba(63, 46, 36, 0.05);
+}
+
+/* --------------------------------------
+   What We Design Section
+--------------------------------------- */
+.kd-white-section {
+  background-color: var(--bg-white);
+  padding: 5rem 5%;
+}
+
+.kd-sec-eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.kd-sec-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--color-dark-brown);
+  margin-bottom: 1rem;
+}
+
+.kd-sec-sub {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------
+   Gallery Section
+--------------------------------------- */
+.kd-gallery-section {
+  padding: 5rem 5%;
+}
+
+.kd-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+@media (min-width: 768px) {
+  .kd-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.kd-gallery-card {
+  background: var(--bg-white);
+  padding: 0.75rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+}
+
+.kd-gallery-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.kd-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.kd-gallery-card:hover .kd-gallery-img {
+  transform: scale(1.05);
+}
+
+.kd-gallery-note {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------
+   Trust Line
+--------------------------------------- */
+.kd-trust-shell {
+  padding: 2rem 5%;
+}
+
+.kd-trust-line {
+  background: var(--bg-white);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 3rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  text-align: center;
+}
+
+.kd-trust-icon {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+}
+
+.kd-trust-text {
+  font-size: 1rem;
+  color: var(--color-dark-brown);
+  font-weight: 500;
+}
+
+/* --------------------------------------
+   Consultation Form
+--------------------------------------- */
+.kd-form-section {
+  padding: 5rem 5%;
+}
+
+.kd-cta-wrap {
+  background: var(--color-dark-brown);
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 2rem;
+  padding: 4rem 3rem;
+  text-align: center;
+}
+
+.kd-cta-eyebrow {
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.kd-cta-h {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--bg-white);
+  margin-bottom: 1rem;
+}
+
+.kd-cta-sub {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.05rem;
+  margin-bottom: 3rem;
+}
+
+.kd-cta-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.kd-form-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .kd-form-fields {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.kd-form-group {
+  text-align: left;
+}
+
+.kd-form-label {
+  display: block;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kd-form-input {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: var(--bg-white);
+  font-family: 'Outfit', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.kd-form-input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.kd-cta-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.kd-btn-gold {
+  background-color: var(--color-gold);
+  color: var(--bg-white);
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-gold);
+}
+
+.kd-btn-gold:hover {
+  background-color: #b38f4d;
+}
+
+.kd-btn-outline-white {
+  background-color: transparent;
+  color: var(--bg-white);
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.4);
+  transition: all 0.3s ease;
+}
+
+.kd-btn-outline-white:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.kd-form-hint {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.85rem;
+}
