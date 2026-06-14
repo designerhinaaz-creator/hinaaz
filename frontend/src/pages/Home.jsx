@@ -12,9 +12,9 @@ import img9 from '../assets/20.png';
 
 /* ─── Data (same structure as Shrusara) ─── */
 const SERVICES = [
-  { title: 'Bridal Collection', desc: 'Custom necklines, perfect fitting & elegant finishing designed to complement your wedding saree.', img: img1, to: '/bridal' },
-  { title: 'Designer Collection', desc: 'Premium handcrafted embroidery with rich detailing, creating a luxurious 3D finish for your bridal blouse.', img: img2, to: '/bridal' },
-  { title: 'Saree Collection', desc: 'Exquisite sarees with premium draping styles, rich fabrics and elegant finishes crafted for every special occasion.', img: img3, to: '/bridal' },
+  { title: 'Bridal Collection', desc: 'Custom necklines, perfect fitting & elegant finishing designed to complement your wedding saree.', img: img1, to: 'https://shop.hinaazdesigner.com/' },
+  { title: 'Designer Collection', desc: 'Premium handcrafted embroidery with rich detailing, creating a luxurious 3D finish for your bridal blouse.', img: img2, to: 'https://shop.hinaazdesigner.com/' },
+  { title: 'Saree Collection', desc: 'Exquisite sarees with premium draping styles, rich fabrics and elegant finishes crafted for every special occasion.', img: img3, to: 'https://shop.hinaazdesigner.com/' },
 ];
 
 const WHY_CHOOSE = [
