@@ -108,7 +108,7 @@ const Footer = () => {
 
         <div className="footer-bottom" style={{ borderTop: '1px solid #4a3b31', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px', color: '#e5e0d8', fontSize: '0.85rem' }}>
           <p style={{ margin: 0 }}>Copyright © Hinaaz Fashion Boutique 2026. All Rights Reserved.</p>
-          <p style={{ margin: 0 }}>Design by <span style={{ fontWeight: 'bold', color: '#ffffff' }}>WEBNAPP STUDIO</span></p>
+          <p style={{ margin: 0 }}>Design by <a href="https://webnappstudio.in/index.html" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#ffffff', textDecoration: 'none' }}>WEBNAPP STUDIO</a></p>
         </div>
       </div>
     </footer>
