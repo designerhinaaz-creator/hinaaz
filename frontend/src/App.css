@@ -454,3 +454,43 @@
   }
 }
 
+/* ── MOBILE FOOTER INSTALL BUTTON ── */
+.mobile-footer-install-wrap {
+  display: none;
+  justify-content: center;
+  width: 100%;
+  margin: 32px 0 10px;
+  padding: 0 16px;
+}
+
+.footer-install-btn {
+  background: linear-gradient(135deg, #cba153, #a07840);
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 100%;
+  max-width: 320px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(203, 161, 83, 0.2);
+  transition: all 0.25s ease;
+  font-family: 'Poppins', sans-serif !important;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.footer-install-btn:hover {
+  background: linear-gradient(135deg, #d4b87a, #b08a50);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(203, 161, 83, 0.35);
+}
+
+@media (max-width: 768px) {
+  .mobile-footer-install-wrap {
+    display: flex;
+  }
+}
+
+

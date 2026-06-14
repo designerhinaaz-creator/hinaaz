@@ -29,14 +29,24 @@ const Footer = () => {
   const handleInstallClick = async (e) => {
     e.preventDefault();
     const promptEvent = window.deferredPrompt;
-    if (!promptEvent) return;
-    
-    promptEvent.prompt();
-    const { outcome } = await promptEvent.userChoice;
-    console.log(`User response to PWA install from footer: ${outcome}`);
-    
-    window.deferredPrompt = null;
-    window.dispatchEvent(new Event('pwa-prompt-changed'));
+    if (promptEvent) {
+      promptEvent.prompt();
+      const { outcome } = await promptEvent.userChoice;
+      console.log(`User response to PWA install from footer: ${outcome}`);
+      
+      window.deferredPrompt = null;
+      window.dispatchEvent(new Event('pwa-prompt-changed'));
+    } else {
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches 
+        || window.navigator.standalone 
+        || false;
+        
+      if (isStandalone) {
+        alert("Hinaaz App is already installed!");
+      } else {
+        alert("To install Hinaaz App:\n\n1. Tap the browser menu/options (three dots or share button)\n2. Select 'Add to Home Screen' or 'Install App'.");
+      }
+    }
   };
 
   return (
@@ -81,12 +91,10 @@ const Footer = () => {
                 <span style={{ fontSize: '0.6rem', color: '#cba153' }}>●</span>
                 <Link to="/contact" style={{ color: '#e5e0d8', textDecoration: 'none' }}>Contact</Link>
               </li>
-              {showInstallBtn && (
-                <li style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e5e0d8', fontSize: '0.9rem' }}>
-                  <span style={{ fontSize: '0.6rem', color: '#cba153' }}>●</span>
-                  <a href="#" onClick={handleInstallClick} style={{ color: '#cba153', textDecoration: 'none', fontWeight: '600' }} id="pwa-install-footer-btn">Install App</a>
-                </li>
-              )}
+              <li style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e5e0d8', fontSize: '0.9rem' }}>
+                <span style={{ fontSize: '0.6rem', color: '#cba153' }}>●</span>
+                <a href="#" onClick={handleInstallClick} style={{ color: '#cba153', textDecoration: 'none', fontWeight: '600' }} id="pwa-install-footer-btn">Install App</a>
+              </li>
             </ul>
           </div>
 
@@ -147,6 +155,13 @@ const Footer = () => {
 
         </div>
 
+        {/* Dedicated mobile PWA install button wrapper */}
+        <div className="mobile-footer-install-wrap">
+          <button onClick={handleInstallClick} className="footer-install-btn" id="pwa-footer-install-btn-mobile">
+            Install Hinaaz App
+          </button>
+        </div>
+
         <div className="footer-bottom" style={{ borderTop: '1px solid #4a3b31', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px', color: '#e5e0d8', fontSize: '0.85rem' }}>
           <p style={{ margin: 0 }}>Copyright © Hinaaz Fashion Boutique 2026. All Rights Reserved.</p>
           <p style={{ margin: 0 }}>Design by <a href="https://webnappstudio.in/index.html" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#ffffff', textDecoration: 'none' }}>WEBNAPP STUDIO</a></p>
@@ -155,5 +170,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;
