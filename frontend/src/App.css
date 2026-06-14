@@ -313,3 +313,144 @@
   font-family: 'Poppins', sans-serif !important;
   color: white !important;
 }
+
+/* ── PWA INSTALL BANNER ── */
+.pwa-install-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #3c2d24; /* Hinaaz Dark Brown */
+  color: #ffffff;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  border-top: 2.5px solid #cba153; /* Hinaaz Gold */
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.4);
+  font-family: 'Poppins', sans-serif !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pwa-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pwa-banner-logo {
+  height: 42px;
+  width: 42px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #f7f2eb;
+  padding: 4px;
+  border: 1px solid rgba(203, 161, 83, 0.2);
+}
+
+.pwa-banner-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.pwa-banner-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.pwa-banner-subtitle {
+  font-size: 0.75rem;
+  color: #e5e0d8;
+  margin: 2px 0 0 0;
+  font-weight: 300;
+}
+
+.pwa-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pwa-btn-skip {
+  background-color: transparent;
+  color: #e5e0d8;
+  border: 1px solid rgba(229, 224, 216, 0.3);
+  padding: 7px 16px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pwa-btn-skip:hover {
+  background-color: rgba(229, 224, 216, 0.1);
+  color: #ffffff;
+  border-color: rgba(229, 224, 216, 0.6);
+}
+
+.pwa-btn-install {
+  background: linear-gradient(135deg, #cba153, #a07840);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 10px rgba(203, 161, 83, 0.25);
+}
+
+.pwa-btn-install:hover {
+  background: linear-gradient(135deg, #d4b87a, #b08a50);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(203, 161, 83, 0.4);
+}
+
+/* Hide on desktop, show only on mobile/tablet */
+@media (min-width: 992px) {
+  .pwa-install-banner {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .pwa-install-banner {
+    flex-direction: column;
+    gap: 14px;
+    align-items: stretch;
+    padding: 12px 18px 16px;
+    text-align: center;
+  }
+  
+  .pwa-banner-content {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .pwa-banner-logo {
+    height: 38px;
+    width: 38px;
+  }
+  
+  .pwa-banner-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .pwa-banner-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .pwa-btn-skip, .pwa-btn-install {
+    flex: 1;
+    text-align: center;
+    padding: 9px 0;
+  }
+}
+

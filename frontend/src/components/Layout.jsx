@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import FloatingActions from './FloatingActions';
 import ScrollToTop from './ScrollToTop';
+import PwaInstallBanner from './PwaInstallBanner';
 
 const Layout = () => {
   return (
@@ -15,8 +16,10 @@ const Layout = () => {
       </main>
       <FloatingActions />
       <Footer />
+      <PwaInstallBanner />
     </div>
   );
 };
 
 export default Layout;
+

@@ -1,9 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import '../App.css';
 
 const Footer = () => {
+  const [showInstallBtn, setShowInstallBtn] = useState(!!window.deferredPrompt);
+
+  useEffect(() => {
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches 
+      || window.navigator.standalone 
+      || false;
+
+    if (isStandalone) {
+      setShowInstallBtn(false);
+      return;
+    }
+
+    const handlePromptChanged = () => {
+      setShowInstallBtn(!!window.deferredPrompt && !isStandalone);
+    };
+
+    window.addEventListener('pwa-prompt-changed', handlePromptChanged);
+    return () => {
+      window.removeEventListener('pwa-prompt-changed', handlePromptChanged);
+    };
+  }, []);
+
+  const handleInstallClick = async (e) => {
+    e.preventDefault();
+    const promptEvent = window.deferredPrompt;
+    if (!promptEvent) return;
+    
+    promptEvent.prompt();
+    const { outcome } = await promptEvent.userChoice;
+    console.log(`User response to PWA install from footer: ${outcome}`);
+    
+    window.deferredPrompt = null;
+    window.dispatchEvent(new Event('pwa-prompt-changed'));
+  };
+
   return (
     <footer className="footer" id="contact" style={{ backgroundColor: '#3c2d24', padding: '80px 0 40px', borderTop: '1px solid #4a3b31' }}>
       <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
@@ -46,6 +81,12 @@ const Footer = () => {
                 <span style={{ fontSize: '0.6rem', color: '#cba153' }}>●</span>
                 <Link to="/contact" style={{ color: '#e5e0d8', textDecoration: 'none' }}>Contact</Link>
               </li>
+              {showInstallBtn && (
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e5e0d8', fontSize: '0.9rem' }}>
+                  <span style={{ fontSize: '0.6rem', color: '#cba153' }}>●</span>
+                  <a href="#" onClick={handleInstallClick} style={{ color: '#cba153', textDecoration: 'none', fontWeight: '600' }} id="pwa-install-footer-btn">Install App</a>
+                </li>
+              )}
             </ul>
           </div>
 
