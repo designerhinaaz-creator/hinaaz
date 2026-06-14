@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
-import img1 from '../assets/1.png';
-import img8 from '../assets/21.png';
+import img1 from '../assets/1.webp';
+import img8 from '../assets/21.webp';
 
 const About = () => {
    return (
