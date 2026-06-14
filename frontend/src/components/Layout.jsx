@@ -10,7 +10,7 @@ const Layout = () => {
     <div className="app" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <ScrollToTop />
       <Header />
-      <main style={{ paddingTop: '100px', flex: 1 }}>
+      <main style={{ paddingTop: '110px', flex: 1 }}>
         <Outlet />
       </main>
       <FloatingActions />
