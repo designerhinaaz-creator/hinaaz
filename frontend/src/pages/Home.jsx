@@ -10,7 +10,7 @@ import img7 from '../assets/7.webp';
 import img8 from '../assets/8.webp';
 import img9 from '../assets/20.webp';
 
-/* ─── Data (same structure as Shrusara) ─── */
+/* ─── Data (same structure as Hinaaz) ─── */
 const SERVICES = [
   { title: 'Bridal Collection', desc: 'Custom necklines, perfect fitting & elegant finishing designed to complement your wedding saree.', img: img1, to: 'https://shop.hinaazdesigner.com/' },
   { title: 'Designer Collection', desc: 'Premium handcrafted embroidery with rich detailing, creating a luxurious 3D finish for your bridal blouse.', img: img2, to: 'https://shop.hinaazdesigner.com/' },
@@ -45,7 +45,7 @@ const WA_URL = `https://wa.me/${PHONE}?text=${WA_TEXT}`;
 const TEL_URL = `tel:${PHONE}`;
 const GOOGLE_URL = 'https://www.google.com/search?q=Hinaaz+Fashion+Boutique+Hyderabad';
 
-/* ─── Service Card (same as Shrusara's <F> component) ─── */
+/* ─── Service Card (same as Hinaaz's <F> component) ─── */
 function ServiceCard({ service }) {
   return (
     <a href={service.to} className="sf-service-card" style={{ textDecoration: 'none' }}>
@@ -63,7 +63,7 @@ function ServiceCard({ service }) {
   );
 }
 
-/* ─── Google SVG (exact Shrusara logo) ─── */
+/* ─── Google SVG (exact Hinaaz logo) ─── */
 function GoogleLogo({ size = 40 }) {
   return (
     <svg viewBox="0 0 48 48" width={size} height={size} aria-hidden="true">

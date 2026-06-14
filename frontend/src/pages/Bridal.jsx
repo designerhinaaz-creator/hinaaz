@@ -14,7 +14,7 @@ import img9 from '../assets/20.png';
 
 const Bridal = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  
+
   // Adjusted array length to match the image grid (15 images in screenshot, using our 9 and reusing some for demo)
   const gallery = [
     { id: 1, src: img1, category: 'Bridal Blouse' },
@@ -31,21 +31,21 @@ const Bridal = () => {
     { id: 12, src: img3, category: 'Gowns' }
   ];
 
-  const filteredGallery = activeFilter === 'All' 
-    ? gallery 
+  const filteredGallery = activeFilter === 'All'
+    ? gallery
     : gallery.filter(item => item.category === activeFilter);
 
   return (
     <div className="bridal-clone-page">
-      
+
       {/* 1. Hero Section */}
       <div className="br-container">
         <section className="br-hero">
           <div className="br-hero-text">
             <p className="br-eyebrow">Bridal Specialist · Hyderabad</p>
             <h1 className="br-hero-h1">
-              Customized Bridal Blouses &<br/>Outfits in Hyderabad
-              <span>with Perfect Fit & Premium<br/>Aari Work</span>
+              Customized Bridal Blouses &<br />Outfits in Hyderabad
+              <span>with Perfect Fit & Premium<br />Aari Work</span>
             </h1>
             <p className="br-sub-flex">
               <span className="br-star" style={{ color: '#c8a361' }}>✦</span>
@@ -99,10 +99,10 @@ const Bridal = () => {
           <h2 className="br-sec-h2">Our Bridal Collection</h2>
           <p className="br-sec-sub">Explore customized bridal blouses, lehengas, and gowns designed for your wedding and special occasions.</p>
         </div>
-        
+
         <div className="br-filters">
           {['All', 'Bridal Blouse', 'Lehenga', 'Gowns'].map(filter => (
-            <button 
+            <button
               key={filter}
               className={`br-filter-pill ${activeFilter === filter ? 'active' : ''}`}
               onClick={() => setActiveFilter(filter)}
@@ -127,7 +127,7 @@ const Bridal = () => {
       <section className="br-section-padding" style={{ paddingTop: '1rem' }}>
         <div className="br-banner-cta">
           <div>
-            <h2 className="br-banner-title">Join our happy brides —<br/>book your consultation today</h2>
+            <h2 className="br-banner-title">Join our happy brides —<br />book your consultation today</h2>
             <p className="br-banner-sub">Start your bridal consultation with Shruthi Ajith</p>
           </div>
           <div>
@@ -162,7 +162,7 @@ const Bridal = () => {
           <h2 className="br-sec-h2">A simple boutique flow from consultation to final fitting</h2>
           <p className="br-sec-sub">Clear steps so you know exactly what to expect at every stage.</p>
         </div>
-        
+
         <div className="br-process-container">
           <article className="br-process-card">
             <span className="br-process-num">01</span>
@@ -189,7 +189,7 @@ const Bridal = () => {
             <div>
               <p className="br-sec-eyebrow">Social Proof</p>
               <h2 className="br-reviews-title">Google Reviews</h2>
-              <p className="br-sec-sub" style={{ margin: 0 }}>Real experiences from brides who trusted Shrusara for their special day.</p>
+              <p className="br-sec-sub" style={{ margin: 0 }}>Real experiences from brides who trusted Hinaaz for their special day.</p>
             </div>
             <div className="br-reviews-rating">
               <span className="br-rating-score">4.9</span>
@@ -199,7 +199,7 @@ const Bridal = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="br-reviews-grid">
             <div className="br-review-item">
               <div className="br-review-head">
@@ -235,7 +235,7 @@ const Bridal = () => {
           <a href="#" className="br-btn-gold">Book Bridal Consultation</a>
         </div>
       </section>
-      
+
     </div>
   );
 };

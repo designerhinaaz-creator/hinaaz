@@ -11,8 +11,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'Shrusara Fashion Boutique',
-        short_name: 'Shrusara',
+        name: 'Hinaaz',
+        short_name: 'Hinaaz',
         description: 'Bridal blouses, designer outfits, lehengas, gowns, and kids outfits.',
         theme_color: '#f4efea',
         background_color: '#f4efea',

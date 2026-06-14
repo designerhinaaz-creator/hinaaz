@@ -7,7 +7,7 @@
   --color-gold: #c8a361;
   --text-primary: #1c1c1c;
   --text-secondary: #5c5c5c;
-  --border-light: rgba(0,0,0,0.06);
+  --border-light: rgba(0, 0, 0, 0.06);
 }
 
 .bridal-clone-page {
@@ -178,7 +178,7 @@
   background: var(--bg-white);
   padding: 2rem;
   border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
 .br-trust-label {
@@ -261,10 +261,11 @@
   font-family: 'Outfit', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
 }
 
-.br-filter-pill:hover, .br-filter-pill.active {
+.br-filter-pill:hover,
+.br-filter-pill.active {
   background: var(--color-dark-brown);
   color: var(--bg-white);
   border-color: var(--color-dark-brown);
@@ -288,7 +289,7 @@
   background: var(--bg-white);
   padding: 0.75rem;
   border-radius: 1.5rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
 }
 
 .br-gallery-img-wrap {
@@ -341,7 +342,7 @@
 }
 
 .br-banner-sub {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1rem;
 }
 
@@ -392,7 +393,7 @@
   background: var(--bg-white);
   padding: 1.25rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   font-weight: 500;
   color: var(--text-primary);
   display: flex;
@@ -408,7 +409,7 @@
 }
 
 /* --------------------------------------
-   Why Shrusara Grid
+   Why Hinaaz Grid
 --------------------------------------- */
 .br-why-grid {
   display: flex;
@@ -423,7 +424,7 @@
   background: var(--bg-white);
   padding: 1.5rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   text-align: center;
   font-weight: 500;
   display: flex;
@@ -458,7 +459,7 @@
   border-radius: 1.5rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
   border: 1px solid var(--border-light);
 }
 
@@ -469,7 +470,8 @@
   font-family: 'Playfair Display', serif;
   font-size: 6rem;
   line-height: 1;
-  color: rgba(200, 163, 97, 0.1); /* light gold watermark */
+  color: rgba(200, 163, 97, 0.1);
+  /* light gold watermark */
   font-weight: 700;
 }
 
@@ -499,7 +501,7 @@
   padding: 4rem;
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02);
 }
 
 .br-reviews-top {
@@ -602,6 +604,6 @@
 }
 
 .br-final-cta .br-sec-sub {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 2.5rem;
 }
