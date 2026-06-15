@@ -40,7 +40,7 @@ const About = () => {
                </div>
                <div style={{ flex: '1.5 1 300px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                   <p style={{ color: '#cba153', fontSize: '0.8rem', letterSpacing: '2px', marginBottom: '10px' }}>THE CHIEF DESIGNER AND FOUNDER</p>
-                  <h2 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', fontFamily: 'var(--font-heading)', marginBottom: '5px', color: '#ffffff' }}>Hinaaz</h2>
+                  <h2 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', fontFamily: 'var(--font-heading)', marginBottom: '5px', color: '#ffffff' }}>Hina Begum</h2>
                   <p style={{ color: '#cba153', marginBottom: '30px', fontSize: '1.1rem' }}>Founder & Chief Designer</p>
 
                   <p style={{ color: '#e5e0d8', lineHeight: '1.6', marginBottom: '20px', fontSize: '1.05rem' }}>

@@ -1,8 +1,9 @@
 import React from 'react';
 import heroImage from '../assets/hero-image.webp';
-import img1 from '../assets/1.webp';
+import finalLogo from '../assets/final-logo1.webp';
+import img1 from '../assets/9.webp';
 import img2 from '../assets/13.webp';
-import img3 from '../assets/12.webp';
+import img3 from '../assets/51.webp';
 import img4 from '../assets/4.webp';
 import img5 from '../assets/5.webp';
 import img6 from '../assets/6.webp';
@@ -137,10 +138,19 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
-          padding: 80px 48px 80px 5vw;
+          padding: 20px 48px 80px 5vw;
           z-index: 2;
           text-align: left;
           max-width: 100%;
+        }
+        .sf-hero-big-logo {
+          width: 85%;
+          max-width: 450px;
+          margin-top: -80px;
+          margin-bottom: 2rem;
+          margin-left: 2.5rem;
+          object-fit: contain;
+          align-self: flex-start;
         }
         .sf-hero-eyebrow {
           display: inline-flex;
@@ -659,6 +669,7 @@ export default function Home() {
       {/* ══ HERO ══ */}
       <section className="sf-hero" id="home">
         <div className="sf-hero-text">
+          <img src={finalLogo} alt="Hinaaz Logo" className="sf-hero-big-logo" />
           <p className="sf-hero-eyebrow">Hinaaz Trusted Boutique · Hyderabad</p>
           <h1 className="sf-hero-h1">Bridal &amp; Designer Boutique in Hyderabad</h1>
           <p className="sf-hero-sub">
